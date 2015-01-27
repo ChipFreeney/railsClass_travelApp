@@ -1,2 +1,6 @@
-<h1>Welcome#about</h1>
-<p>Find me in app/views/welcome/about.html.erb</p>
+<h1>About</h1>
+<p>GoPro Shenanigans</p>
+
+<% @images.each do |filename, extention| %>
+  <%= image_tag "#{filename}.#{extention}", :alt => filename, :class => "full" %>
+<% end %>
