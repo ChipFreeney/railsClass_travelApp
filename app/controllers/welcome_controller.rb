@@ -8,6 +8,8 @@ class WelcomeController < ApplicationController
       "Brother" => "Brad", 
       "Sister" => "Alex", 
     }
+    @username = params[:username]
+    @shoesize = params[:shoesize]
   end
 
   def about

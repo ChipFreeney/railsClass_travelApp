@@ -13,3 +13,12 @@
 <% @family.each do |relation, name| %>
   <%= "#{name} is my #{relation}." %><br>
 <% end %>
+<hr>
+<%= "My name is #{@username}" %>
+<hr>
+<p>My shoe size is <%= @shoesize %></p>
+<% if @shoesize.to_i >= 11 %>
+  No it aint
+<% else %>
+  You got them tiny feet
+<% end %>
