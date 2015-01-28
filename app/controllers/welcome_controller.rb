@@ -1,23 +1,14 @@
 class WelcomeController < ApplicationController
   def index
-    @homeland = 'Russia'
-    @countries = ["US", "Canada", "Mexico"]
-    @family = {
-      "Dad" => "Fred", 
-      "Mom" => "Danna", 
-      "Brother" => "Brad", 
-      "Sister" => "Alex", 
-    }
-    @username = params[:username]
-    @shoesize = params[:shoesize]
+
+    @welcome = params[:welcome]
+    @referral = params[:referral]
+    @nightmode = params[:nightmode]
+    @background = params[:background]
+
   end
 
   def about
-    @images = {
-      "vapor_trail_chip" => "jpg",
-      "AR_chip" => "png", 
-      "glock_chip" => "png", 
-      "flame_will" => "png"
-    }
+    @referral = params[:referral]
   end
 end

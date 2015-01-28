@@ -1,24 +1,58 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<%= link_to "About", '../about?referral=index'%>
 
-<p>My homeland is <%= @homeland %></p>
+<h1>Prestige Worldwide Travel</h1>
+<p><%= @welcome %></p>
 
-<p>Countries I've visited:</p>
+<% if @referral %>
+  <p>You came from the <%= @referral %> page!</p>
+<% end %>
+
+<hr>
+
+
+<p>Variables to make the page change</p>
 <ul>
-  <% @countries.each do |country| %>
-    <li><%= country %></li>
-  <% end %>
+  <li>welcome</li>
+  <li>background</li>
+  <li>nightmode</li>
 </ul>
 
-<% @family.each do |relation, name| %>
-  <%= "#{name} is my #{relation}." %><br>
+
+<%= link_to "Red", '?background=%23FFAAAA'%>
+<%= link_to "Green", '?background=%23AAFFAA'%>
+<%= link_to "Blue", '?background=%23AAAAFF'%>
+<%= link_to "White", '?background=%23FFFFFF'%>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+
+body{
+  background: <%= @background %>;
+}
+
+<% if @nightmode == "true" %>
+  body{
+    background: #333;
+    color: white; 
+  }
+  a{
+    color: white;
+  }
 <% end %>
-<hr>
-<%= "My name is #{@username}" %>
-<hr>
-<p>My shoe size is <%= @shoesize %></p>
-<% if @shoesize.to_i >= 11 %>
-  No it aint
-<% else %>
-  You got them tiny feet
-<% end %>
+
+
+
+
+</style>

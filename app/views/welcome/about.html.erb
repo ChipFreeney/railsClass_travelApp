@@ -1,6 +1,7 @@
-<h1>About</h1>
-<p>GoPro Shenanigans</p>
+<%= link_to "Index", '../?referral=about' %>
 
-<% @images.each do |filename, extention| %>
-  <%= image_tag "#{filename}.#{extention}", :alt => filename, :class => "full" %>
+<h1>About</h1>
+
+<% if @referral %>
+  <p>You came from the <%= @referral %> page!</p>
 <% end %>
