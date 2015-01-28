@@ -17,12 +17,12 @@
   <li>nightmode</li>
 </ul>
 
-
-<%= link_to "Red", '?background=%23FFAAAA'%>
-<%= link_to "Green", '?background=%23AAFFAA'%>
-<%= link_to "Blue", '?background=%23AAAAFF'%>
-<%= link_to "White", '?background=%23FFFFFF'%>
-
+<div id="footer">
+  <%= link_to "Red", '?background=%23FFAAAA'%>
+  <%= link_to "Green", '?background=%23AAFFAA'%>
+  <%= link_to "Blue", '?background=%23AAAAFF'%>
+  <%= link_to "White", '?background=%23FFFFFF'%>
+</div>
 
 
 
@@ -40,6 +40,12 @@
 
 body{
   background: <%= @background %>;
+}
+
+#footer{
+  margin:0px auto;
+  position:absolute;
+  bottom: 10px;
 }
 
 <% if @nightmode == "true" %>
