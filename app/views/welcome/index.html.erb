@@ -1,4 +1,4 @@
-<%= link_to "About", '../about?referral=index'%>
+<%= link_to "About", about_path(params.except(:action, :controller, :background)) %>
 
 <h1>Prestige Worldwide Travel</h1>
 <p><%= @welcome %></p>
@@ -23,42 +23,8 @@
   <%= link_to "Blue", '?background=%23AAAAFF'%>
   <%= link_to "White", '?background=%23FFFFFF'%>
 </div>
+<hr>
 
-
-
-
-
-
-
-
-
-
-
-
-
-<style>
-
-body{
-  background: <%= @background %>;
-}
-
-#footer{
-  margin:0px auto;
-  position:absolute;
-  bottom: 10px;
-}
-
-<% if @nightmode == "true" %>
-  body{
-    background: #333;
-    color: white; 
-  }
-  a{
-    color: white;
-  }
-<% end %>
-
-
-
-
-</style>
+Session <%= session[:background] %><br>
+Param   <%= params[:background] %><br>
+instance <%= @background %>

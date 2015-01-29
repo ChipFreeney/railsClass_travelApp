@@ -11,4 +11,27 @@
 <%= yield %>
 
 </body>
+<style>
+
+  body{
+    background: <%= @background %>;
+  }
+
+  #footer{
+    margin:0px auto;
+    position:absolute;
+    bottom: 10px;
+  }
+
+  <% if @nightmode == "true" %>
+    body{
+      background: #333;
+      color: white; 
+    }
+    a{
+      color: white;
+    }
+  <% end %>
+
+</style>
 </html>
