@@ -7,31 +7,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <nav>
+    <%= link_to "Index", root_path(params.except(:action, :controller, :background)) %>
+    <%= link_to "About", about_path(params.except(:action, :controller, :background)) %>
+    <%= link_to "Contact", contact_path(params.except(:action, :controller, :background)) %>
+  </nav>
 
 <%= yield %>
 
 </body>
-<style>
-
-  body{
-    background: <%= @background %>;
-  }
-
-  #footer{
-    margin:0px auto;
-    position:absolute;
-    bottom: 10px;
-  }
-
-  <% if @nightmode == "true" %>
-    body{
-      background: #333;
-      color: white; 
-    }
-    a{
-      color: white;
-    }
-  <% end %>
-
-</style>
 </html>

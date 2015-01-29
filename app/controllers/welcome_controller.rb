@@ -17,6 +17,11 @@ class WelcomeController < ApplicationController
 
   end
 
+  # action
+  def contact
+
+  end
+
 
   private 
   def set_color
