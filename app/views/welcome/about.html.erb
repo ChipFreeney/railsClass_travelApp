@@ -1,17 +1,1 @@
 <h1>About</h1>
-
-<% if @referral %>
-  <p>You came from the <%= @referral %> page!</p>
-<% end %>
-
-<hr>
-Session <%= session[:background] %><br>
-Param   <%= params[:background] %><br>
-instance <%= @background %>
-
-<div id="footer">
-  <%= link_to "Red", '?background=%23FFAAAA'%>
-  <%= link_to "Green", '?background=%23AAFFAA'%>
-  <%= link_to "Blue", '?background=%23AAAAFF'%>
-  <%= link_to "White", '?background=%23FFFFFF'%>
-</div>

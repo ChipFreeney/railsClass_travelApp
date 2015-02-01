@@ -1,19 +1,13 @@
 class WelcomeController < ApplicationController
-  before_action :set_color
+  before_action :set_vars
 
   # action
   def index
-
-    @welcome = params[:welcome]
-    @referral = params[:referral]
-    @nightmode = params[:nightmode]
 
   end
 
   # action
   def about
-
-    @referral = params[:referral]
 
   end
 
@@ -24,12 +18,21 @@ class WelcomeController < ApplicationController
 
 
   private 
-  def set_color
+  def set_vars
 
-    if params[:background]
-      session[:background] = params[:background]
+    @vars = {
+      "name" => ""
+    }
+
+    if params[:name]
+      session[:name] = params[:name]
     end
-    @background = session[:background]
+    @vars["name"] = session[:name]
+
+
+
+
+
 
   end
 
