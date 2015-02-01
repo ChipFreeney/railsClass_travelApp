@@ -1,2 +1,4 @@
 <h1>Contact</h1>
-<%= "Welcome, #{@vars["name"]}" %>
+<% if params[:name] %>
+  <%= "Welcome, #{params[:name]}" %>
+<% end %>
