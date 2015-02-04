@@ -1,10 +1,6 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Destinations in Panels</h1>
-<%= link_to 'All', destinations_path %>
-<%= link_to 'US', '?country=US' %>
-<%= link_to 'France', '?country=France' %>
-<%= link_to 'Russia', '?country=Russia' %>
 
   <div class="row">
     <% @destinations.each do |destination| %>
@@ -29,4 +25,3 @@
 <br>
 
 <%= link_to 'New Destination', new_destination_path %>
-
