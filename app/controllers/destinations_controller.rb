@@ -16,14 +16,6 @@ class DestinationsController < ApplicationController
   def show
   end
 
-  def french
-    @destinations = Destination.where(country: 'France').all
-  end
-
-  def custom_destinations
-    @destinations = Destination.where(country: params[:country]).all
-  end
-
   # GET /destinations/new
   def new
     @destination = Destination.new

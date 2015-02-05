@@ -8,14 +8,15 @@
 
   <div class="row">
     <% @destinations.each do |destination| %>
-      <div class="col-md-4">
+      <div class="col-md-4 col-sm-6">
        <div class="panel panel-default">
         <div class="panel-body">
-         <h2><%= destination.city %>, <%= destination.country %></h2>
+         <h2><%= link_to destination.city, destination %></h2>
+         <p><%= destination.country %></p>
          <p><%= destination.description %></p>
        
          <div class="btn-group">
-          <%= link_to 'Show', destination, class: "btn btn-default" %>
+          
           <%= link_to 'Edit', edit_destination_path(destination), class: "btn btn-default" %>
           <!-- link below is a destory that prompts a confirm. method is GET unless overridden -->
           <%= link_to 'Destroy', destination, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %>
